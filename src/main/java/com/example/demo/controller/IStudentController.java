@@ -1,18 +1,16 @@
 package com.example.demo.controller;
 
-import com.example.demo.entities.Student;
+import com.example.demo.dto.StudentDTO;
+import com.example.demo.dto.StudentIUDTO;
 import java.util.List;
 
 public interface IStudentController {
 
-    Student saveStudent(Student student);
+    StudentDTO saveStudent(StudentIUDTO studentIUDTO);
 
-    // Tüm öğrencileri listelemek için kullanacağımız metot tanımı
-    List<Student> getAllStudents();
+    List<StudentDTO> getAllStudents();
 
-    // ID'ye göre tek bir öğrenciyi getirmek için kullanacağımız metot tanımı
-    Student getStudentById(Long id);
+    StudentDTO getStudentById(Long id);
 
-    // ID'ye göre öğrenciyi silmek için kullanacağımız metot tanımı
     void deleteStudent(Long id);
 }
